@@ -9,9 +9,9 @@ The APIs listed in this documentation are for reference purposes. The intent is 
 
 Collections are the top most parent in the entity hierarchy
 
-## All Collections [/collections]
+## '/collections' [/collections]
 
-### Try this API [GET]
+### GET [GET]
 
 Paginated lists of all BROSA product collections 
 
@@ -19,115 +19,186 @@ Paginated lists of all BROSA product collections
     
         {"collections":"name"}
 
-## All Collections  - with products [/collections/products]
+### POST [POST]
 
-### Try this API [GET]
-
-Paginated lists of all BROSA product collections with products information
+Create new BROSA product collection
 
 + Response 200 (application/json)
     
         {"collections":"name"}
 
-## All Collections  - with products & variants [/collections/products/variants]
+## '/collections/{id}'   [/collections/{id}]
 
-### Try this API [GET]
+### GET [GET]
 
-Paginated lists of all BROSA product collections with products and the associated variants
-
-+ Response 200 (application/json)
-    
-        {"collections":"name"}
-
-## All Collections  - with products, variants & attributes [/collections/products/variants/attributes]
-
-### Try this API [GET]
-
-Paginated lists of all BROSA product collections with products, the associated variants and the associated attributes
+Details of a specific BROSA product collections.  
 
 + Response 200 (application/json)
     
         {"collections":"name"}
+        
+### POST [POST]
 
-## Collection by ID [/collection/{id}]
+Update existing BROSA product collection
 
-### Try this API [GET]
++ Response 200 (application/json)
+    
+        {"collections":"name"}        
 
-Specific product collection parameters 
+## '/collections/{id}/delete' [/collections/{id}/delete]
+
+### POST [POST]
+
+Delete existing BROSA product collection
 
 + Response 200 (application/json)
     
         {"collections":"name"}
-
-## Collection by ID - with products [/collection/{id}/products]
-
-### Try this API [GET]
-
-Specific product collection parameters along with the associated products information
-
-+ Response 200 (application/json)
-    
-        {"collections":"name"}
-
-## Collection by ID  - with products & variants [/collection/{id}/products/variants]
-
-### Try this API [GET]
-
-Specific product collection parameters along with the associated products and the variants information
-
-+ Response 200 (application/json)
-    
-        {"collections":"name"}
-
-## Collection by ID  - with products, variants and attributes [/collection/{id}/products/variants/attributes]
-
-### Try this API [GET]
-
-Specific product collection parameters along with products, the associated variants and the associated attributes
-
-+ Response 200 (application/json)
-    
-        {"collections":"name"}
-
 
 # Group Product
 
 Each Product belongs to/is a child of a Collection and has many Variants
 
-## All Products [/products]
+## '/products' [/products]
 
-### Try this API [GET]
+### GET [GET]
 
-Paginated lists of all BROSA products 
+Paginated lists of all BROSA product 
 
 + Response 200 (application/json)
+    
+        {"products":"name"}
 
-        {"products":[{"id":11,"name":"Shaggy Rug 170 x 240cm","variants":[]},{"id":12,"name":"Swivel Office Chair","variants":[]},{"id":14,"name":"Wool Rug 170 x 240cm","variants":[]},{"id":15,"name":"Scoop Back Dining Chair","variants":[]},{"id":16,"name":"Brosa Limited","variants":[{"id":577,"sku":"Parts- BEDLEI01BEI\/QB (Gas lift Strut, screws & Bottom CardBoard)","cost_type":null,"cost_price":null,"is_active":false,"attributes":[]},{"id":1540,"sku":"CHAPIL03CRM","cost_type":null,"cost_price":null,"is_active":true,"attributes":[]},{"id":3288,"sku":"OTOMKN16BLU","cost_type":null,"cost_price":null,"is_active":true,"attributes":[]},{"id":3662,"sku":"","cost_type":null,"cost_price":null,"is_active":true,"attributes":[]},{"id":3755,"sku":"CHAMIA15OAK","cost_type":null,"cost_price":null,"is_active":true,"attributes":[]},{"id":4054,"sku":"CHAESP19BEI2X","cost_type":null,"cost_price":null,"is_active":true,"attributes":[]},{"id":4151,"sku":"Archived","cost_type":null,"cost_price":null,"is_active":false,"attributes":[]},{"id":4782,"sku":"BEDANN01BEIQB","cost_type":"FOB (USD)","cost_price":514,"is_active":false,"attributes":[{"id":6,"name":"Factory SKU","value":"MC660-Q"},{"id":8,"name":"Product Width (cm)","value":"220"},{"id":9,"name":"Product Depth (cm)","value":"168"},{"id":10,"name":"Product Height (cm)","value":"133"},{"id":11,"name":"Product Dead Weight (kg)","value":"50"},{"id":12,"name":"Main Colour","value":"French Beige"},{"id":13,"name":"Colour Collection","value":"Signature Premium"},{"id":14,"name":"Main Colour Code","value":"3104-3"},{"id":19,"name":"Frame Wood Type","value":"Oak"},{"id":20,"name":"Leg Wood Type","value":"Oak"},{"id":21,"name":"Leg Colour","value":"Natural"},{"id":22,"name":"Leg Colour Code","value":"Brushed wax finish heritage legs D272-R"},{"id":23,"name":"Finish Type","value":"WBW"},{"id":24,"name":"Inner Filling","value":"Medium Density Foam Core and Polyster wadding"},{"id":30,"name":"Assembly Level","value":"FP"}]},{"id":6376,"sku":"","cost_type":null,"cost_price":null,"is_active":true,"attributes":[]}]}],"count":5,"pages":203,"current_page":3}
+### POST [POST]
 
+Create new BROSA product 
+
++ Response 200 (application/json)
+    
+        {"products":"name"}
+
+## '/products/{id}'   [/products/{id}]
+
+### GET [GET]
+
+Details of a specific BROSA product .  
+
++ Response 200 (application/json)
+    
+        {"products":"name"}
+        
+### POST [POST]
+
+Update existing BROSA product 
+
++ Response 200 (application/json)
+    
+        {"products":"name"}        
+
+## '/products/{id}/delete' [/products/{id}/delete]
+
+### POST [POST]
+
+Delete existing BROSA product 
+
++ Response 200 (application/json)
+    
+        {"products":"name"}
+        
 # Group Variant
 
 Each Variant belongs to/is a child of a Product and has many Attributes
 
-## All Variants [/variants]
+## '/variants' [/variants]
 
-### Try this API [GET]
+### GET [GET]
 
-Paginated lists of all BROSA product variants 
+Paginated lists of all BROSA product variants
 
 + Response 200 (application/json)
+    
+        {"variants":"name"}
 
-        {"variants":[{"id":1,"sku":"SOFAKE10BLA","cost_type":null,"cost_price":null,"is_active":false,"attributes":[{"id":12,"name":"Main Colour","value":"Obsidian Black"}]},{"id":2,"sku":"SOFAKE06GRY","cost_type":null,"cost_price":null,"is_active":false,"attributes":[{"id":12,"name":"Main Colour","value":"Gun Metal"}]},{"id":3,"sku":"SOFAKE02GRE","cost_type":null,"cost_price":null,"is_active":false,"attributes":[{"id":12,"name":"Main Colour","value":"Olive Green"}]},{"id":4,"sku":"SOFAKE09BLA","cost_type":null,"cost_price":null,"is_active":false,"attributes":[{"id":12,"name":"Main Colour","value":"Obsidian Black"}]},{"id":5,"sku":"SOFAKE05GRY","cost_type":null,"cost_price":null,"is_active":false,"attributes":[{"id":12,"name":"Main Colour","value":"Gun Metal"}]}],"count":5,"pages":1394,"current_page":1}        
+### POST [POST]
+
+Create new BROSA product variants
+
++ Response 200 (application/json)
+    
+        {"variants":"name"}
+
+## '/variants/{id}'   [/variants/{id}]
+
+### GET [GET]
+
+Details of a specific BROSA product variants  
+
++ Response 200 (application/json)
+    
+        {"variants":"name"}
+        
+### POST [POST]
+
+Update existing BROSA product variants
+
++ Response 200 (application/json)
+    
+        {"variants":"name"}        
+
+## '/variants/{id}/delete' [/variants/{id}/delete]
+
+### POST [POST]
+
+Delete existing BROSA product variants
+
++ Response 200 (application/json)
+    
+        {"variants":"name"}
 
 # Group Attributes
 
-## All Attributes [/attributes]
+## '/attributes' [/attributes]
 
-Each Attribute belongs to/is a child of a Product's Variant
+### GET [GET]
 
-### Try this API [GET]
-
-Paginated lists of all BROSA product variant attributes 
+Paginated lists of all BROSA product/variant attributes
 
 + Response 200 (application/json)
+    
+        {"attributes":"name"}
 
-        {"attributes":[{"id":6,"name":"Factory SKU","value":""},{"id":7,"name":"Product Sub-Type","value":""},{"id":8,"name":"Product Width (cm)","value":""},{"id":9,"name":"Product Depth (cm)","value":""},{"id":10,"name":"Product Height (cm)","value":""}],"count":5,"pages":6,"current_page":1}
+### POST [POST]
+
+Create new BROSA product/variant attributes
+
++ Response 200 (application/json)
+    
+        {"attributes":"name"}
+
+## '/attributes/{id}'   [/attributes/{id}]
+
+### GET [GET]
+
+Details of a specific BROSA product/variant attributes  
+
++ Response 200 (application/json)
+    
+        {"attributes":"name"}
+        
+### POST [POST]
+
+Update existing BROSA product/variant attributes
+
++ Response 200 (application/json)
+    
+        {"attributes":"name"}        
+
+## '/attributes/{id}/delete' [/attributes/{id}/delete]
+
+### POST [POST]
+
+Delete existing BROSA product/variants attributes
+
++ Response 200 (application/json)
+    
+        {"attributes":"name"}
