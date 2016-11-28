@@ -246,41 +246,378 @@ Delete existing BROSA product collection
 
 Each Product belongs to/is a child of a Collection and has many Variants
 
-## '/products' [/products]
+## '/products' [/products?{sort,include,page}]
 
 ### GET [GET]
 
 Paginated lists of all BROSA product 
 
++ Parameters
+    + sort (optional) - To get the results sorted. Values could be id/name or -id/-name for ascending or decending order
+    + include (optional) - To specify the entities included. Values could be variants
+    + page (optional) - To specify the pagenumber required
+
+
 + Response 200 (application/json)
     
-        {"products":"name"}
+        {
+          "data": [
+            {
+              "id": 164,
+              "name": "1 Seater Armchair",
+              "collection_id": 70,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/164?include=variants"
+            },
+            {
+              "id": 171,
+              "name": "1 seater Classic Roll-arm Chesterfield",
+              "collection_id": 72,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/171?include=variants"
+            },
+            {
+              "id": 180,
+              "name": "1 seater Classic Roll-arm Chesterfield",
+              "collection_id": 76,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/180?include=variants"
+            },
+            {
+              "id": 153,
+              "name": "1 Seater Lounge Seat",
+              "collection_id": 66,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/153?include=variants"
+            },
+            {
+              "id": 159,
+              "name": "1 Seater Lounge Seat",
+              "collection_id": 68,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/159?include=variants"
+            },
+            {
+              "id": 168,
+              "name": "1 Seater Lounge Seat",
+              "collection_id": 71,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/168?include=variants"
+            },
+            {
+              "id": 375,
+              "name": "110cm End Extension Dining Table",
+              "collection_id": 147,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/375?include=variants"
+            },
+            {
+              "id": 377,
+              "name": "120cm Sideboard",
+              "collection_id": 147,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/377?include=variants"
+            },
+            {
+              "id": 376,
+              "name": "150cm End Extension Dining Table",
+              "collection_id": 147,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/376?include=variants"
+            },
+            {
+              "id": 378,
+              "name": "160cm Wide Sideboard",
+              "collection_id": 147,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/378?include=variants"
+            },
+            {
+              "id": 302,
+              "name": "2 Seat Sofa",
+              "collection_id": 135,
+              "has_variants": true,
+              "link": "http://brosa-api.dev/api/products/302?include=variants"
+            },
+            {
+              "id": 1,
+              "name": "2 Seater",
+              "collection_id": 1,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/1?include=variants"
+            },
+            {
+              "id": 264,
+              "name": "2 Seater",
+              "collection_id": 119,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/264?include=variants"
+            },
+            {
+              "id": 266,
+              "name": "2 Seater",
+              "collection_id": 120,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/266?include=variants"
+            },
+            {
+              "id": 269,
+              "name": "2 Seater",
+              "collection_id": 121,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/269?include=variants"
+            },
+            {
+              "id": 272,
+              "name": "2 Seater",
+              "collection_id": 122,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/272?include=variants"
+            },
+            {
+              "id": 46,
+              "name": "2 Seater",
+              "collection_id": 23,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/46?include=variants"
+            },
+            {
+              "id": 73,
+              "name": "2 Seater",
+              "collection_id": 33,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/73?include=variants"
+            },
+            {
+              "id": 86,
+              "name": "2 Seater",
+              "collection_id": 38,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/86?include=variants"
+            },
+            {
+              "id": 650,
+              "name": "2 Seater",
+              "collection_id": 177,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/650?include=variants"
+            },
+            {
+              "id": 154,
+              "name": "2 Seater",
+              "collection_id": 66,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/154?include=variants"
+            },
+            {
+              "id": 158,
+              "name": "2 Seater",
+              "collection_id": 68,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/158?include=variants"
+            },
+            {
+              "id": 674,
+              "name": "2 Seater",
+              "collection_id": 190,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/674?include=variants"
+            },
+            {
+              "id": 419,
+              "name": "2 Seater",
+              "collection_id": 152,
+              "has_variants": true,
+              "link": "http://brosa-api.dev/api/products/419?include=variants"
+            },
+            {
+              "id": 165,
+              "name": "2 Seater",
+              "collection_id": 70,
+              "has_variants": false,
+              "link": "http://brosa-api.dev/api/products/165?include=variants"
+            }
+          ],
+          "count": 25,
+          "pages": 41,
+          "current_page": 1
+        }
 
 ### POST [POST]
 
 Create new BROSA product 
 
++ Attributes
+    + name (required, string) - Name of the BROSA product 
+    + collection_id (required, number) - primary key of the BROSA product collection
+    + attribute
+        + attribute_name = attribute_value (optional, string) - Name of the BROSA product 
+
 + Response 200 (application/json)
     
-        {"products":"name"}
+        {"data":[{"id":1093,"name":"Test asda","collection_id":167,"has_variants":false,"link":"http:\/\/brosa-api.dev\/api\/products\/1093?include=variants"}]}
 
-## '/products/{id}'   [/products/{id}]
+## '/products/{id}'   [/products/{id}{?include}]
 
 ### GET [GET]
 
 Details of a specific BROSA product .  
 
++ Parameters
+    + id - To indicate the specific BROSA product
+    + include (optional) - To specify the entities included. Values could be variants
+
 + Response 200 (application/json)
     
-        {"products":"name"}
+        {
+          "data": [
+            {
+              "id": 677,
+              "name": "2.5 Seater Sofa +  left hand Chaise Set",
+              "collection_id": 192,
+              "has_variants": true,
+              "link": "http://brosa-api.dev/api/products/677?include=variants",
+              "variants": {
+                "data": [
+                  {
+                    "id": 3804,
+                    "sku": "SOFDEN02GRY",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3804"
+                  },
+                  {
+                    "id": 3805,
+                    "sku": "SOFDEN03GRE",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3805"
+                  },
+                  {
+                    "id": 3806,
+                    "sku": "SOFDEN04TEA",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3806"
+                  },
+                  {
+                    "id": 3807,
+                    "sku": "SOFDEN05BEI",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3807"
+                  },
+                  {
+                    "id": 3808,
+                    "sku": "SOFDEN06GRY",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3808"
+                  },
+                  {
+                    "id": 3809,
+                    "sku": "SOFDEN07CHA",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3809"
+                  },
+                  {
+                    "id": 3810,
+                    "sku": "SOFDEN08GRY",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3810"
+                  },
+                  {
+                    "id": 3811,
+                    "sku": "SOFDEN09RED",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3811"
+                  },
+                  {
+                    "id": 3812,
+                    "sku": "SOFDEN10RAS",
+                    "product_id": 677,
+                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
+                    "cost_type": null,
+                    "cost_price": null,
+                    "fabric_cost": null,
+                    "required_fabric": null,
+                    "has_attributes": true,
+                    "is_active": false,
+                    "link": "http://brosa-api.dev/api/variants/3812"
+                  }
+                ]
+              }
+            }
+          ]
+        }
         
 ### POST [POST]
 
 Update existing BROSA product 
 
++ Parameters
+    + id - To indicate the specific BROSA product
+
++ Attributes
+    + name (required, string) - Name of the BROSA product 
+    + collection_id (required, number) - primary key of the BROSA product collection
+    + attribute
+        + attribute_name = attribute_value (optional, string) - Name of the BROSA product 
+
 + Response 200 (application/json)
     
-        {"products":"name"}        
+        {"data":[{"id":1093,"name":"Test3","collection_id":167,"has_variants":false,"link":"http:\/\/brosa-api.dev\/api\/products\/1093?include=variants"}]}        
 
 ## '/products/{id}/delete' [/products/{id}/delete]
 
@@ -288,49 +625,782 @@ Update existing BROSA product
 
 Delete existing BROSA product 
 
++ Parameters
+    + id - To indicate the specific BROSA product
+
 + Response 200 (application/json)
     
-        {"products":"name"}
+        {
+          "data": {
+            "status": "200",
+            "title": "Item Deleted",
+            "detail": "The resource item is deleted"
+          }
+        }
         
 # Group Variant
 
 Each Variant belongs to/is a child of a Product and has many Attributes
 
-## '/variants' [/variants]
+## '/variants' [/variants{?sort,page}]
 
 ### GET [GET]
 
 Paginated lists of all BROSA product variants
 
++ Parameters
+    + sort (optional) - To get the results sorted. Values could be id/sku or -id/-sku for ascending or decending order
+    + page (optional) - To specify the pagenumber required
+
 + Response 200 (application/json)
     
-        {"variants":"name"}
+        {
+          "data": [
+            {
+              "id": 3662,
+              "sku": "",
+              "product_id": 16,
+              "product_sub_type": null,
+              "cost_type": null,
+              "cost_price": null,
+              "fabric_cost": null,
+              "required_fabric": null,
+              "has_attributes": false,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/3662"
+            },
+            {
+              "id": 6376,
+              "sku": "",
+              "product_id": 16,
+              "product_sub_type": null,
+              "cost_type": null,
+              "cost_price": null,
+              "fabric_cost": null,
+              "required_fabric": null,
+              "has_attributes": false,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/6376"
+            },
+            {
+              "id": 590,
+              "sku": "1 x Replacement leg for Jesper armchair (dark brown stain)",
+              "product_id": 885,
+              "product_sub_type": null,
+              "cost_type": null,
+              "cost_price": null,
+              "fabric_cost": null,
+              "required_fabric": null,
+              "has_attributes": false,
+              "is_active": false,
+              "link": "http://brosa-api.dev/api/variants/590"
+            },
+            {
+              "id": 4151,
+              "sku": "Archived",
+              "product_id": 16,
+              "product_sub_type": "Archived",
+              "cost_type": null,
+              "cost_price": null,
+              "fabric_cost": null,
+              "required_fabric": null,
+              "has_attributes": false,
+              "is_active": false,
+              "link": "http://brosa-api.dev/api/variants/4151"
+            },
+            {
+              "id": 993,
+              "sku": "ARMABI01CRM",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/993"
+            },
+            {
+              "id": 994,
+              "sku": "ARMABI02GRY",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/994"
+            },
+            {
+              "id": 995,
+              "sku": "ARMABI03GRY",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/995"
+            },
+            {
+              "id": 996,
+              "sku": "ARMABI04GRY",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/996"
+            },
+            {
+              "id": 997,
+              "sku": "ARMABI05BEI",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/997"
+            },
+            {
+              "id": 998,
+              "sku": "ARMABI06BLU",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/998"
+            },
+            {
+              "id": 999,
+              "sku": "ARMABI07GRN",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/999"
+            },
+            {
+              "id": 1000,
+              "sku": "ARMABI08BLA",
+              "product_id": 752,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 175,
+              "fabric_cost": null,
+              "required_fabric": 3.6,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/1000"
+            },
+            {
+              "id": 877,
+              "sku": "ARMADE01BLU",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": false,
+              "link": "http://brosa-api.dev/api/variants/877"
+            },
+            {
+              "id": 878,
+              "sku": "ARMADE02RED",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": false,
+              "link": "http://brosa-api.dev/api/variants/878"
+            },
+            {
+              "id": 879,
+              "sku": "ARMADE03GRY",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": false,
+              "link": "http://brosa-api.dev/api/variants/879"
+            },
+            {
+              "id": 880,
+              "sku": "ARMADE04CRM",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/880"
+            },
+            {
+              "id": 881,
+              "sku": "ARMADE05GRY",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/881"
+            },
+            {
+              "id": 882,
+              "sku": "ARMADE06BLA",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/882"
+            },
+            {
+              "id": 883,
+              "sku": "ARMADE07GRY",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/883"
+            },
+            {
+              "id": 884,
+              "sku": "ARMADE08GRE",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/884"
+            },
+            {
+              "id": 885,
+              "sku": "ARMADE09BLU",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/885"
+            },
+            {
+              "id": 2259,
+              "sku": "ARMADE10BLU",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2259"
+            },
+            {
+              "id": 2260,
+              "sku": "ARMADE11RED",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2260"
+            },
+            {
+              "id": 2261,
+              "sku": "ARMADE12YLW",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2261"
+            },
+            {
+              "id": 2262,
+              "sku": "ARMADE13BLA",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2262"
+            }
+          ],
+          "count": 25,
+          "pages": 279,
+          "current_page": 1
+        }
 
 ### POST [POST]
 
 Create new BROSA product variants
 
++ Attributes
+    + sku (required, string) 
+    + product_id (required, number)
+    + product_sub_type (required, string)
+    + cost_price (required, number)
+    + cost_type (required, string)
+    + fabric_cost (required, number)
+    + required_fabric (required, number)
+    + attribute
+        + attribute_name = attribute_value (optional, string)
+
 + Response 200 (application/json)
     
-        {"variants":"name"}
+        {
+          "data": [
+            {
+              "id": 2262,
+              "sku": "ARMADE13BLA",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2262",
+              "attributes": {
+                "data": [
+                  {
+                    "id": 6,
+                    "name": "Factory SKU",
+                    "value": "DSF17"
+                  },
+                  {
+                    "id": 8,
+                    "name": "Product Width (cm)",
+                    "value": "78"
+                  },
+                  {
+                    "id": 9,
+                    "name": "Product Depth (cm)",
+                    "value": "85"
+                  },
+                  {
+                    "id": 10,
+                    "name": "Product Height (cm)",
+                    "value": "100.5"
+                  },
+                  {
+                    "id": 11,
+                    "name": "Product Dead Weight (kg)",
+                    "value": "5"
+                  },
+                  {
+                    "id": 12,
+                    "name": "Main Colour",
+                    "value": "Windsor Black Print"
+                  },
+                  {
+                    "id": 14,
+                    "name": "Main Colour Code",
+                    "value": "MG-GZ__"
+                  },
+                  {
+                    "id": 19,
+                    "name": "Frame Wood Type",
+                    "value": "Solid Beech"
+                  },
+                  {
+                    "id": 20,
+                    "name": "Leg Wood Type",
+                    "value": "SolidBeech"
+                  },
+                  {
+                    "id": 21,
+                    "name": "Leg Colour",
+                    "value": "Dark Brown"
+                  },
+                  {
+                    "id": 22,
+                    "name": "Leg Colour Code",
+                    "value": "Wenge-B-Coffee"
+                  },
+                  {
+                    "id": 23,
+                    "name": "Finish Type",
+                    "value": "Lacquered"
+                  },
+                  {
+                    "id": 24,
+                    "name": "Inner Filling",
+                    "value": "Foam core (30-38kg/cbm)"
+                  },
+                  {
+                    "id": 25,
+                    "name": "Suspension",
+                    "value": "S-Springs"
+                  },
+                  {
+                    "id": 26,
+                    "name": "Seating Height (cm)",
+                    "value": "51"
+                  },
+                  {
+                    "id": 27,
+                    "name": "Seating Depth (cm)",
+                    "value": "56"
+                  },
+                  {
+                    "id": 28,
+                    "name": "Seating Width (cm)",
+                    "value": "49"
+                  },
+                  {
+                    "id": 29,
+                    "name": "Arm Height (cm)",
+                    "value": "64/68"
+                  },
+                  {
+                    "id": 30,
+                    "name": "Assembly Level",
+                    "value": "KD"
+                  },
+                  {
+                    "id": 31,
+                    "name": "Image URL",
+                    "value": "https://cdn.shopify.com/s/files/1/0737/3319/products/armchair-adele-windsor-black-6.jpg?v=1458621372"
+                  }
+                ]
+              }
+            }
+          ]
+        } 
 
 ## '/variants/{id}'   [/variants/{id}]
 
 ### GET [GET]
 
-Details of a specific BROSA product variants  
+Details of a specific BROSA product variant  
+
++ Parameters
+    + id - To indicate the specific BROSA product variant
 
 + Response 200 (application/json)
     
-        {"variants":"name"}
+        {
+          "data": [
+            {
+              "id": 2262,
+              "sku": "ARMADE13BLA",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2262",
+              "attributes": {
+                "data": [
+                  {
+                    "id": 6,
+                    "name": "Factory SKU",
+                    "value": "DSF17"
+                  },
+                  {
+                    "id": 8,
+                    "name": "Product Width (cm)",
+                    "value": "78"
+                  },
+                  {
+                    "id": 9,
+                    "name": "Product Depth (cm)",
+                    "value": "85"
+                  },
+                  {
+                    "id": 10,
+                    "name": "Product Height (cm)",
+                    "value": "100.5"
+                  },
+                  {
+                    "id": 11,
+                    "name": "Product Dead Weight (kg)",
+                    "value": "5"
+                  },
+                  {
+                    "id": 12,
+                    "name": "Main Colour",
+                    "value": "Windsor Black Print"
+                  },
+                  {
+                    "id": 14,
+                    "name": "Main Colour Code",
+                    "value": "MG-GZ__"
+                  },
+                  {
+                    "id": 19,
+                    "name": "Frame Wood Type",
+                    "value": "Solid Beech"
+                  },
+                  {
+                    "id": 20,
+                    "name": "Leg Wood Type",
+                    "value": "SolidBeech"
+                  },
+                  {
+                    "id": 21,
+                    "name": "Leg Colour",
+                    "value": "Dark Brown"
+                  },
+                  {
+                    "id": 22,
+                    "name": "Leg Colour Code",
+                    "value": "Wenge-B-Coffee"
+                  },
+                  {
+                    "id": 23,
+                    "name": "Finish Type",
+                    "value": "Lacquered"
+                  },
+                  {
+                    "id": 24,
+                    "name": "Inner Filling",
+                    "value": "Foam core (30-38kg/cbm)"
+                  },
+                  {
+                    "id": 25,
+                    "name": "Suspension",
+                    "value": "S-Springs"
+                  },
+                  {
+                    "id": 26,
+                    "name": "Seating Height (cm)",
+                    "value": "51"
+                  },
+                  {
+                    "id": 27,
+                    "name": "Seating Depth (cm)",
+                    "value": "56"
+                  },
+                  {
+                    "id": 28,
+                    "name": "Seating Width (cm)",
+                    "value": "49"
+                  },
+                  {
+                    "id": 29,
+                    "name": "Arm Height (cm)",
+                    "value": "64/68"
+                  },
+                  {
+                    "id": 30,
+                    "name": "Assembly Level",
+                    "value": "KD"
+                  },
+                  {
+                    "id": 31,
+                    "name": "Image URL",
+                    "value": "https://cdn.shopify.com/s/files/1/0737/3319/products/armchair-adele-windsor-black-6.jpg?v=1458621372"
+                  }
+                ]
+              }
+            }
+          ]
+        }
         
 ### POST [POST]
 
 Update existing BROSA product variants
 
+
++ Attributes
+    + sku (required, string) 
+    + product_id (required, number)
+    + product_sub_type (required, string)
+    + cost_price (required, number)
+    + cost_type (required, string)
+    + fabric_cost (required, number)
+    + required_fabric (required, number)
+    + attribute
+        + attribute_name = attribute_value (optional, string)
+
++ Parameters
+    + id - To indicate the specific BROSA product variant
+
 + Response 200 (application/json)
     
-        {"variants":"name"}        
+        {
+          "data": [
+            {
+              "id": 2262,
+              "sku": "ARMADE13BLA",
+              "product_id": 753,
+              "product_sub_type": "Armchair",
+              "cost_type": "FOB (USD)",
+              "cost_price": 75,
+              "fabric_cost": null,
+              "required_fabric": 2.5,
+              "has_attributes": true,
+              "is_active": true,
+              "link": "http://brosa-api.dev/api/variants/2262",
+              "attributes": {
+                "data": [
+                  {
+                    "id": 6,
+                    "name": "Factory SKU",
+                    "value": "DSF17"
+                  },
+                  {
+                    "id": 8,
+                    "name": "Product Width (cm)",
+                    "value": "78"
+                  },
+                  {
+                    "id": 9,
+                    "name": "Product Depth (cm)",
+                    "value": "85"
+                  },
+                  {
+                    "id": 10,
+                    "name": "Product Height (cm)",
+                    "value": "100.5"
+                  },
+                  {
+                    "id": 11,
+                    "name": "Product Dead Weight (kg)",
+                    "value": "5"
+                  },
+                  {
+                    "id": 12,
+                    "name": "Main Colour",
+                    "value": "Windsor Black Print"
+                  },
+                  {
+                    "id": 14,
+                    "name": "Main Colour Code",
+                    "value": "MG-GZ__"
+                  },
+                  {
+                    "id": 19,
+                    "name": "Frame Wood Type",
+                    "value": "Solid Beech"
+                  },
+                  {
+                    "id": 20,
+                    "name": "Leg Wood Type",
+                    "value": "SolidBeech"
+                  },
+                  {
+                    "id": 21,
+                    "name": "Leg Colour",
+                    "value": "Dark Brown"
+                  },
+                  {
+                    "id": 22,
+                    "name": "Leg Colour Code",
+                    "value": "Wenge-B-Coffee"
+                  },
+                  {
+                    "id": 23,
+                    "name": "Finish Type",
+                    "value": "Lacquered"
+                  },
+                  {
+                    "id": 24,
+                    "name": "Inner Filling",
+                    "value": "Foam core (30-38kg/cbm)"
+                  },
+                  {
+                    "id": 25,
+                    "name": "Suspension",
+                    "value": "S-Springs"
+                  },
+                  {
+                    "id": 26,
+                    "name": "Seating Height (cm)",
+                    "value": "51"
+                  },
+                  {
+                    "id": 27,
+                    "name": "Seating Depth (cm)",
+                    "value": "56"
+                  },
+                  {
+                    "id": 28,
+                    "name": "Seating Width (cm)",
+                    "value": "49"
+                  },
+                  {
+                    "id": 29,
+                    "name": "Arm Height (cm)",
+                    "value": "64/68"
+                  },
+                  {
+                    "id": 30,
+                    "name": "Assembly Level",
+                    "value": "KD"
+                  },
+                  {
+                    "id": 31,
+                    "name": "Image URL",
+                    "value": "https://cdn.shopify.com/s/files/1/0737/3319/products/armchair-adele-windsor-black-6.jpg?v=1458621372"
+                  }
+                ]
+              }
+            }
+          ]
+        }        
 
 ## '/variants/{id}/delete' [/variants/{id}/delete]
 
@@ -338,9 +1408,18 @@ Update existing BROSA product variants
 
 Delete existing BROSA product variants
 
++ Parameters
+    + id - To indicate the specific BROSA product variant
+
 + Response 200 (application/json)
     
-        {"variants":"name"}
+        {
+          "data": {
+            "status": "200",
+            "title": "Item Deleted",
+            "detail": "The resource item is deleted"
+          }
+        }
 
 # Group Attributes
 
