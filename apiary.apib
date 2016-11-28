@@ -1423,23 +1423,170 @@ Delete existing BROSA product variants
 
 # Group Attributes
 
-## '/attributes' [/attributes]
+## '/attributes' [/attributes{?sort,page}]
 
 ### GET [GET]
 
 Paginated lists of all BROSA product/variant attributes
 
++ Parameters
+    + sort (optional) - To get the results sorted. Values could be id/sku or -id/-sku for ascending or decending order
+    + page (optional) - To specify the pagenumber required
+
 + Response 200 (application/json)
     
-        {"attributes":"name"}
+        {
+          "data": [
+            {
+              "id": 29,
+              "name": "Arm Height (cm)",
+              "value": ""
+            },
+            {
+              "id": 30,
+              "name": "Assembly Level",
+              "value": ""
+            },
+            {
+              "id": 13,
+              "name": "Colour Collection",
+              "value": ""
+            },
+            {
+              "id": 18,
+              "name": "Detailing",
+              "value": ""
+            },
+            {
+              "id": 6,
+              "name": "Factory SKU",
+              "value": ""
+            },
+            {
+              "id": 23,
+              "name": "Finish Type",
+              "value": ""
+            },
+            {
+              "id": 19,
+              "name": "Frame Wood Type",
+              "value": ""
+            },
+            {
+              "id": 31,
+              "name": "Image URL",
+              "value": ""
+            },
+            {
+              "id": 24,
+              "name": "Inner Filling",
+              "value": ""
+            },
+            {
+              "id": 21,
+              "name": "Leg Colour",
+              "value": ""
+            },
+            {
+              "id": 22,
+              "name": "Leg Colour Code",
+              "value": ""
+            },
+            {
+              "id": 20,
+              "name": "Leg Wood Type",
+              "value": ""
+            },
+            {
+              "id": 12,
+              "name": "Main Colour",
+              "value": ""
+            },
+            {
+              "id": 14,
+              "name": "Main Colour Code",
+              "value": ""
+            },
+            {
+              "id": 16,
+              "name": "Piping Colour",
+              "value": ""
+            },
+            {
+              "id": 17,
+              "name": "Piping Colour Code",
+              "value": ""
+            },
+            {
+              "id": 11,
+              "name": "Product Dead Weight (kg)",
+              "value": ""
+            },
+            {
+              "id": 9,
+              "name": "Product Depth (cm)",
+              "value": ""
+            },
+            {
+              "id": 10,
+              "name": "Product Height (cm)",
+              "value": ""
+            },
+            {
+              "id": 7,
+              "name": "Product Sub-Type",
+              "value": ""
+            },
+            {
+              "id": 8,
+              "name": "Product Width (cm)",
+              "value": ""
+            },
+            {
+              "id": 15,
+              "name": "Required Fabric (m)",
+              "value": ""
+            },
+            {
+              "id": 27,
+              "name": "Seating Depth (cm)",
+              "value": ""
+            },
+            {
+              "id": 26,
+              "name": "Seating Height (cm)",
+              "value": ""
+            },
+            {
+              "id": 28,
+              "name": "Seating Width (cm)",
+              "value": ""
+            }
+          ],
+          "count": 25,
+          "pages": 2,
+          "current_page": 1
+        }
 
 ### POST [POST]
 
 Create new BROSA product/variant attributes
 
++ Attributes
+    + name (required, string)
+    + slug (required, string)
+    
 + Response 200 (application/json)
     
-        {"attributes":"name"}
+        {
+          "data": [
+            {
+              "id": 32,
+              "name": "testing123",
+              "value": ""
+            }
+          ]
+        }
 
 ## '/attributes/{id}'   [/attributes/{id}]
 
@@ -1447,17 +1594,43 @@ Create new BROSA product/variant attributes
 
 Details of a specific BROSA product/variant attributes  
 
++ Parameters
+    + id - To indicate the specific BROSA product/variants attributes
+
 + Response 200 (application/json)
     
-        {"attributes":"name"}
+        {
+          "data": [
+            {
+              "id": 21,
+              "name": "Leg Colour",
+              "value": ""
+            }
+          ]
+        }
         
 ### POST [POST]
 
 Update existing BROSA product/variant attributes
 
++ Parameters
+    + id - To indicate the specific BROSA product/variants attributes
+    
++ Attributes
+    + name (required, string)
+    + slug (required, string)
+    
 + Response 200 (application/json)
     
-        {"attributes":"name"}        
+        {
+          "data": [
+            {
+              "id": 32,
+              "name": "testing456",
+              "value": ""
+            }
+          ]
+        }        
 
 ## '/attributes/{id}/delete' [/attributes/{id}/delete]
 
@@ -1465,6 +1638,15 @@ Update existing BROSA product/variant attributes
 
 Delete existing BROSA product/variants attributes
 
++ Parameters
+    + id - To indicate the specific BROSA product/variants attributes
+
 + Response 200 (application/json)
     
-        {"attributes":"name"}
+        {
+          "data": {
+            "status": "200",
+            "title": "Item Deleted",
+            "detail": "The resource item is deleted"
+          }
+        }
