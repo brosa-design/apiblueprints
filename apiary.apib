@@ -5,6 +5,36 @@ HOST: http://core.app/api
 
 The APIs listed in this documentation are for reference purposes. The intent is to provide BROSA products related data as requested in API requests listed in hierarchy
 
+# Group Taxonomies
+
+Collections are the top most parent in the entity hierarchy
+
+## '/taxonomies' [/taxonomies]
+
+### GET [GET]
+
+Paginated lists of all BROSA taxonomies 
+
++ Response 200 (application/json)
+
+        {"data":[{"id":1,"name":"Function","root":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":19,"name":"Entertainments","parent_id":1,"taxon":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":40,"name":"TV Stands","parent_id":19}]}]},{"id":2,"name":"Department","root":[{"id":3,"name":"Outdoor","parent_id":2,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":91,"name":"Porch","parent_id":3,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":54,"name":"Garden","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":55,"name":"Chairs","parent_id":54},{"id":56,"name":"Tables","parent_id":54}]}]}]},{"id":4,"name":"Indoor","parent_id":2,"taxon":[{"id":3,"name":"Outdoor","parent_id":2,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":91,"name":"Porch","parent_id":3,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":54,"name":"Garden","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":55,"name":"Chairs","parent_id":54},{"id":56,"name":"Tables","parent_id":54}]}]}]},{"id":31,"name":"Living","parent_id":4,"taxon":[{"id":3,"name":"Outdoor","parent_id":2,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":91,"name":"Porch","parent_id":3,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":54,"name":"Garden","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":55,"name":"Chairs","parent_id":54},{"id":56,"name":"Tables","parent_id":54}]}]}]},{"id":22,"name":"Sofas","parent_id":31},{"id":37,"name":"Tables","parent_id":31},{"id":39,"name":"TV Stands","parent_id":31}]}]}]}]}
+        
+## '/taxonomies{id}' [/taxonomies{id}]
+
+### GET [GET]
+
+Update existing BROSA product collection
+
++ Parameters
+    + id - To indicate the specific BROSA product collection
+
++ Attributes
+    + name (required, string) - Name of the BROSA product collection
+
++ Response 200 (application/json)
+    
+        {"data":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":19,"name":"Entertainments","parent_id":1,"taxon":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":40,"name":"TV Stands","parent_id":19}]}]}
+
 # Group Collection
 
 Collections are the top most parent in the entity hierarchy
@@ -203,7 +233,7 @@ Details of a specific BROSA product collection.
     
 
 + Response 200 (application/json)
-    
+
         {
           "data": [
             {
@@ -214,7 +244,7 @@ Details of a specific BROSA product collection.
             }
           ]
         }
-        
+
 ### POST [POST]
 
 Update existing BROSA product collection
@@ -226,9 +256,9 @@ Update existing BROSA product collection
     + name (required, string) - Name of the BROSA product collection
 
 + Response 200 (application/json)
-    
-        {"data":[{"id":100,"name":"Test Controller 2","has_products":true,"link":"http:\/\/brosa-api.dev\/api\/collections\/100?include=products"}]}        
 
+        {"data":[{"id":100,"name":"Test Controller 2","has_products":true,"link":"http:\/\/brosa-api.dev\/api\/collections\/100?include=products"}]}
+        
 ## '/collections/{id}/delete' [/collections/{id}/delete]
 
 ### POST [POST]
@@ -242,6 +272,7 @@ Delete existing BROSA product collection
     
         {"data":{"status":"200","title":"Item Deleted","detail":"The resource item is deleted"}}
 
+
 # Group Product
 
 Each Product belongs to/is a child of a Collection and has many Variants
@@ -254,7 +285,7 @@ Paginated lists of all BROSA product
 
 + Parameters
     + sort (optional) - To get the results sorted. Values could be id/name or -id/-name for ascending or decending order
-    + include (optional) - To specify the entities included. Values could be variants
+    + include (optional) - To specify the entities included. Values could be variants, attributes
     + page (optional) - To specify the pagenumber required
 
 
@@ -263,184 +294,684 @@ Paginated lists of all BROSA product
         {
           "data": [
             {
-              "id": 164,
-              "name": "1 Seater Armchair",
-              "collection_id": 70,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/164?include=variants"
+              "id": 790,
+              "name": "Beds",
+              "collection_id": 4,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 171,
-              "name": "1 seater Classic Roll-arm Chesterfield",
-              "collection_id": 72,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/171?include=variants"
+              "id": 791,
+              "name": "Beds",
+              "collection_id": 21,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 180,
-              "name": "1 seater Classic Roll-arm Chesterfield",
-              "collection_id": 76,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/180?include=variants"
+              "id": 792,
+              "name": "Beds",
+              "collection_id": 26,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 153,
-              "name": "1 Seater Lounge Seat",
-              "collection_id": 66,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/153?include=variants"
+              "id": 793,
+              "name": "Beds",
+              "collection_id": 36,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 159,
-              "name": "1 Seater Lounge Seat",
-              "collection_id": 68,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/159?include=variants"
+              "id": 795,
+              "name": "Beds",
+              "collection_id": 127,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 168,
-              "name": "1 Seater Lounge Seat",
-              "collection_id": 71,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/168?include=variants"
+              "id": 796,
+              "name": "Beds",
+              "collection_id": 12,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 375,
-              "name": "110cm End Extension Dining Table",
-              "collection_id": 147,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/375?include=variants"
+              "id": 797,
+              "name": "Beds",
+              "collection_id": 133,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 377,
-              "name": "120cm Sideboard",
-              "collection_id": 147,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/377?include=variants"
+              "id": 798,
+              "name": "Beds",
+              "collection_id": 130,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 376,
-              "name": "150cm End Extension Dining Table",
-              "collection_id": 147,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/376?include=variants"
+              "id": 799,
+              "name": "Beds",
+              "collection_id": 19,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 378,
-              "name": "160cm Wide Sideboard",
-              "collection_id": 147,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/378?include=variants"
+              "id": 800,
+              "name": "Beds",
+              "collection_id": 24,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 302,
-              "name": "2 Seat Sofa",
-              "collection_id": 135,
-              "has_variants": true,
-              "link": "http://brosa-api.dev/api/products/302?include=variants"
+              "id": 801,
+              "name": "Beds",
+              "collection_id": 128,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 1,
-              "name": "2 Seater",
-              "collection_id": 1,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/1?include=variants"
+              "id": 802,
+              "name": "Beds",
+              "collection_id": 126,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 264,
-              "name": "2 Seater",
-              "collection_id": 119,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/264?include=variants"
+              "id": 803,
+              "name": "Beds",
+              "collection_id": 134,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 266,
-              "name": "2 Seater",
-              "collection_id": 120,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/266?include=variants"
+              "id": 804,
+              "name": "Beds",
+              "collection_id": 129,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 269,
-              "name": "2 Seater",
-              "collection_id": 121,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/269?include=variants"
+              "id": 805,
+              "name": "Beds",
+              "collection_id": 132,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 272,
-              "name": "2 Seater",
-              "collection_id": 122,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/272?include=variants"
+              "id": 806,
+              "name": "Beds",
+              "collection_id": 125,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 46,
-              "name": "2 Seater",
-              "collection_id": 23,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/46?include=variants"
+              "id": 807,
+              "name": "Beds",
+              "collection_id": 51,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": true
             },
             {
-              "id": 73,
-              "name": "2 Seater",
-              "collection_id": 33,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/73?include=variants"
+              "id": 808,
+              "name": "Beds",
+              "collection_id": 131,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 86,
-              "name": "2 Seater",
-              "collection_id": 38,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/86?include=variants"
+              "id": 1086,
+              "name": "Beds",
+              "collection_id": 171,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 650,
-              "name": "2 Seater",
-              "collection_id": 177,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/650?include=variants"
+              "id": 1089,
+              "name": "Beds",
+              "collection_id": 359,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 154,
-              "name": "2 Seater",
-              "collection_id": 66,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/154?include=variants"
+              "id": 911,
+              "name": "Beds",
+              "collection_id": 214,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 158,
-              "name": "2 Seater",
-              "collection_id": 68,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/158?include=variants"
+              "id": 912,
+              "name": "Beds",
+              "collection_id": 236,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 674,
-              "name": "2 Seater",
-              "collection_id": 190,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/674?include=variants"
+              "id": 913,
+              "name": "Beds",
+              "collection_id": 215,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 419,
-              "name": "2 Seater",
-              "collection_id": 152,
-              "has_variants": true,
-              "link": "http://brosa-api.dev/api/products/419?include=variants"
+              "id": 914,
+              "name": "Beds",
+              "collection_id": 216,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             },
             {
-              "id": 165,
-              "name": "2 Seater",
-              "collection_id": 70,
-              "has_variants": false,
-              "link": "http://brosa-api.dev/api/products/165?include=variants"
+              "id": 950,
+              "name": "Beds",
+              "collection_id": 245,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
             }
           ],
           "count": 25,
           "pages": 41,
-          "current_page": 1
+          "current_page": 10
         }
 
 ### POST [POST]
@@ -468,133 +999,252 @@ Details of a specific BROSA product .
     + include (optional) - To specify the entities included. Values could be variants
 
 + Response 200 (application/json)
-    
+
         {
           "data": [
             {
-              "id": 677,
-              "name": "2.5 Seater Sofa +  left hand Chaise Set",
-              "collection_id": 192,
+              "id": 791,
+              "name": "Beds",
+              "collection_id": 21,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 95,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Beds",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                  },
+                  {
+                    "id": 96,
+                    "parent": 18,
+                    "children": false,
+                    "text": "Beds",
+                    "master": null,
+                    "permalink": "Function/Relaxing/Beds/Beds"
+                  }
+                ]
+              },
+              "has_attributes": false,
               "has_variants": true,
-              "link": "http://brosa-api.dev/api/products/677?include=variants",
               "variants": {
                 "data": [
                   {
-                    "id": 3804,
-                    "sku": "SOFDEN02GRY",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
+                    "id": 1030,
+                    "sku": "BEDERI01GRYQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "1",
                     "cost_price": null,
-                    "fabric_cost": null,
-                    "required_fabric": null,
+                    "fabric_cost": 0,
+                    "required_fabric": 2.5,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3804"
+                    "is_active": false
                   },
                   {
-                    "id": 3805,
-                    "sku": "SOFDEN03GRE",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
+                    "id": 1031,
+                    "sku": "BEDERI02GRYQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "1",
                     "cost_price": null,
-                    "fabric_cost": null,
-                    "required_fabric": null,
+                    "fabric_cost": 0,
+                    "required_fabric": 2.5,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3805"
+                    "is_active": false
                   },
                   {
-                    "id": 3806,
-                    "sku": "SOFDEN04TEA",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
+                    "id": 1032,
+                    "sku": "BEDERI03CHAQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "1",
                     "cost_price": null,
-                    "fabric_cost": null,
-                    "required_fabric": null,
+                    "fabric_cost": 0,
+                    "required_fabric": 2.5,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3806"
+                    "is_active": false
                   },
                   {
-                    "id": 3807,
-                    "sku": "SOFDEN05BEI",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
-                    "cost_price": null,
+                    "id": 1033,
+                    "sku": "BEDERI04BEIQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "120",
+                    "cost_price": 190,
                     "fabric_cost": null,
-                    "required_fabric": null,
+                    "required_fabric": 0,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3807"
+                    "is_active": false
                   },
                   {
-                    "id": 3808,
-                    "sku": "SOFDEN06GRY",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
-                    "cost_price": null,
+                    "id": 1034,
+                    "sku": "BEDERI05BLUQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "120",
+                    "cost_price": 190,
                     "fabric_cost": null,
-                    "required_fabric": null,
+                    "required_fabric": 0,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3808"
+                    "is_active": false
                   },
                   {
-                    "id": 3809,
-                    "sku": "SOFDEN07CHA",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
-                    "cost_price": null,
+                    "id": 1035,
+                    "sku": "BEDERI11HGRYQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "120",
+                    "cost_price": 190,
                     "fabric_cost": null,
-                    "required_fabric": null,
+                    "required_fabric": 0,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3809"
+                    "is_active": false
                   },
                   {
-                    "id": 3810,
-                    "sku": "SOFDEN08GRY",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
-                    "cost_price": null,
+                    "id": 1036,
+                    "sku": "BEDERI13GRYQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "120",
+                    "cost_price": 190,
                     "fabric_cost": null,
-                    "required_fabric": null,
+                    "required_fabric": 0,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3810"
+                    "is_active": false
                   },
                   {
-                    "id": 3811,
-                    "sku": "SOFDEN09RED",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
-                    "cost_price": null,
+                    "id": 1037,
+                    "sku": "BEDERI15BEIQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "120",
+                    "cost_price": 190,
                     "fabric_cost": null,
-                    "required_fabric": null,
+                    "required_fabric": 0,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3811"
+                    "is_active": false
                   },
                   {
-                    "id": 3812,
-                    "sku": "SOFDEN10RAS",
-                    "product_id": 677,
-                    "product_sub_type": "2.5 Seater Sofa + left hand Chaise Set",
-                    "cost_type": null,
-                    "cost_price": null,
+                    "id": 1038,
+                    "sku": "BEDERI17CGRYQB",
+                    "product_id": 791,
+                    "product_sub_type": "24",
+                    "cost_type": "120",
+                    "cost_price": 190,
                     "fabric_cost": null,
-                    "required_fabric": null,
+                    "required_fabric": 0,
                     "has_attributes": true,
-                    "is_active": false,
-                    "link": "http://brosa-api.dev/api/variants/3812"
+                    "is_active": false
+                  },
+                  {
+                    "id": 1039,
+                    "sku": "BEDERI06GRYKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "1",
+                    "cost_price": null,
+                    "fabric_cost": 0,
+                    "required_fabric": 3,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1040,
+                    "sku": "BEDERI07GRYKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "1",
+                    "cost_price": null,
+                    "fabric_cost": 0,
+                    "required_fabric": 3,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1041,
+                    "sku": "BEDERI08CHAKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "1",
+                    "cost_price": null,
+                    "fabric_cost": 0,
+                    "required_fabric": 3,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1042,
+                    "sku": "BEDERI09BEIKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "120",
+                    "cost_price": 217,
+                    "fabric_cost": null,
+                    "required_fabric": 0,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1043,
+                    "sku": "BEDERI10BLUKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "120",
+                    "cost_price": 217,
+                    "fabric_cost": null,
+                    "required_fabric": 0,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1044,
+                    "sku": "BEDERI12HGRYKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "120",
+                    "cost_price": 217,
+                    "fabric_cost": null,
+                    "required_fabric": 0,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1045,
+                    "sku": "BEDERI14GRYKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "120",
+                    "cost_price": 217,
+                    "fabric_cost": null,
+                    "required_fabric": 0,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1046,
+                    "sku": "BEDERI16BEIKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "120",
+                    "cost_price": 217,
+                    "fabric_cost": null,
+                    "required_fabric": 0,
+                    "has_attributes": true,
+                    "is_active": false
+                  },
+                  {
+                    "id": 1047,
+                    "sku": "BEDERI18CGRYKB",
+                    "product_id": 791,
+                    "product_sub_type": "25",
+                    "cost_type": "120",
+                    "cost_price": 217,
+                    "fabric_cost": null,
+                    "required_fabric": 0,
+                    "has_attributes": true,
+                    "is_active": false
                   }
                 ]
               }
@@ -657,333 +1307,308 @@ Paginated lists of all BROSA product variants
         {
           "data": [
             {
-              "id": 3662,
-              "sku": "",
-              "product_id": 16,
-              "product_sub_type": null,
-              "cost_type": null,
-              "cost_price": null,
-              "fabric_cost": null,
-              "required_fabric": null,
-              "has_attributes": false,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/3662"
+              "id": 1910,
+              "sku": "11111",
+              "product_id": 1,
+              "product_sub_type": "2",
+              "cost_type": "119",
+              "cost_price": 2,
+              "fabric_cost": 2,
+              "required_fabric": 2,
+              "has_attributes": true,
+              "is_active": true
             },
             {
-              "id": 6376,
-              "sku": "",
-              "product_id": 16,
-              "product_sub_type": null,
-              "cost_type": null,
-              "cost_price": null,
-              "fabric_cost": null,
-              "required_fabric": null,
-              "has_attributes": false,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/6376"
+              "id": 1911,
+              "sku": "2222",
+              "product_id": 3,
+              "product_sub_type": "3",
+              "cost_type": "119",
+              "cost_price": 2,
+              "fabric_cost": 2,
+              "required_fabric": 2,
+              "has_attributes": true,
+              "is_active": true
             },
             {
-              "id": 590,
-              "sku": "1 x Replacement leg for Jesper armchair (dark brown stain)",
-              "product_id": 885,
-              "product_sub_type": null,
-              "cost_type": null,
-              "cost_price": null,
-              "fabric_cost": null,
-              "required_fabric": null,
-              "has_attributes": false,
-              "is_active": false,
-              "link": "http://brosa-api.dev/api/variants/590"
+              "id": 1913,
+              "sku": "4444",
+              "product_id": 1,
+              "product_sub_type": "2",
+              "cost_type": "119",
+              "cost_price": 6,
+              "fabric_cost": 6,
+              "required_fabric": 6,
+              "has_attributes": true,
+              "is_active": true
             },
             {
-              "id": 4151,
-              "sku": "Archived",
-              "product_id": 16,
-              "product_sub_type": "Archived",
-              "cost_type": null,
-              "cost_price": null,
-              "fabric_cost": null,
-              "required_fabric": null,
+              "id": 1921,
+              "sku": "54321",
+              "product_id": 1,
+              "product_sub_type": "2",
+              "cost_type": "119",
+              "cost_price": 2,
+              "fabric_cost": 2,
+              "required_fabric": 2,
               "has_attributes": false,
-              "is_active": false,
-              "link": "http://brosa-api.dev/api/variants/4151"
+              "is_active": true
             },
             {
-              "id": 993,
+              "id": 1922,
+              "sku": "54321",
+              "product_id": 1,
+              "product_sub_type": "2",
+              "cost_type": "119",
+              "cost_price": 2,
+              "fabric_cost": 2,
+              "required_fabric": 2,
+              "has_attributes": false,
+              "is_active": true
+            },
+            {
+              "id": 1912,
+              "sku": "555555",
+              "product_id": 2,
+              "product_sub_type": "2",
+              "cost_type": "119",
+              "cost_price": 55,
+              "fabric_cost": 55,
+              "required_fabric": 55,
+              "has_attributes": true,
+              "is_active": true
+            },
+            {
+              "id": 1924,
+              "sku": "654321",
+              "product_id": 1,
+              "product_sub_type": "1",
+              "cost_type": "119",
+              "cost_price": 1,
+              "fabric_cost": 1,
+              "required_fabric": 1,
+              "has_attributes": true,
+              "is_active": true
+            },
+            {
+              "id": 1923,
+              "sku": "99999",
+              "product_id": 1,
+              "product_sub_type": "1",
+              "cost_type": "119",
+              "cost_price": 1,
+              "fabric_cost": 1,
+              "required_fabric": 1,
+              "has_attributes": false,
+              "is_active": true
+            },
+            {
+              "id": 1863,
               "sku": "ARMABI01CRM",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/993"
+              "is_active": true
             },
             {
-              "id": 994,
+              "id": 1864,
               "sku": "ARMABI02GRY",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/994"
+              "is_active": true
             },
             {
-              "id": 995,
+              "id": 1865,
               "sku": "ARMABI03GRY",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
-              "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/995"
+              "has_attributes": false,
+              "is_active": true
             },
             {
-              "id": 996,
+              "id": 1866,
               "sku": "ARMABI04GRY",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/996"
+              "is_active": true
             },
             {
-              "id": 997,
+              "id": 1867,
               "sku": "ARMABI05BEI",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/997"
+              "is_active": true
             },
             {
-              "id": 998,
+              "id": 1868,
               "sku": "ARMABI06BLU",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/998"
+              "is_active": true
             },
             {
-              "id": 999,
+              "id": 1869,
               "sku": "ARMABI07GRN",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/999"
+              "is_active": true
             },
             {
-              "id": 1000,
+              "id": 1870,
               "sku": "ARMABI08BLA",
               "product_id": 752,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 175,
               "fabric_cost": null,
               "required_fabric": 3.6,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/1000"
+              "is_active": true
             },
             {
-              "id": 877,
+              "id": 1747,
               "sku": "ARMADE01BLU",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": false,
-              "link": "http://brosa-api.dev/api/variants/877"
+              "is_active": false
             },
             {
-              "id": 878,
+              "id": 1748,
               "sku": "ARMADE02RED",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
-              "has_attributes": true,
-              "is_active": false,
-              "link": "http://brosa-api.dev/api/variants/878"
+              "has_attributes": false,
+              "is_active": false
             },
             {
-              "id": 879,
+              "id": 1749,
               "sku": "ARMADE03GRY",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": false,
-              "link": "http://brosa-api.dev/api/variants/879"
+              "is_active": false
             },
             {
-              "id": 880,
+              "id": 1750,
               "sku": "ARMADE04CRM",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/880"
+              "is_active": true
             },
             {
-              "id": 881,
+              "id": 1751,
               "sku": "ARMADE05GRY",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/881"
+              "is_active": true
             },
             {
-              "id": 882,
+              "id": 1752,
               "sku": "ARMADE06BLA",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/882"
+              "is_active": true
             },
             {
-              "id": 883,
+              "id": 1753,
               "sku": "ARMADE07GRY",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
-              "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/883"
+              "has_attributes": false,
+              "is_active": true
             },
             {
-              "id": 884,
+              "id": 1754,
               "sku": "ARMADE08GRE",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/884"
+              "is_active": true
             },
             {
-              "id": 885,
+              "id": 1755,
               "sku": "ARMADE09BLU",
               "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
+              "product_sub_type": "1",
+              "cost_type": "120",
               "cost_price": 75,
               "fabric_cost": null,
               "required_fabric": 2.5,
               "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/885"
-            },
-            {
-              "id": 2259,
-              "sku": "ARMADE10BLU",
-              "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
-              "cost_price": 75,
-              "fabric_cost": null,
-              "required_fabric": 2.5,
-              "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/2259"
-            },
-            {
-              "id": 2260,
-              "sku": "ARMADE11RED",
-              "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
-              "cost_price": 75,
-              "fabric_cost": null,
-              "required_fabric": 2.5,
-              "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/2260"
-            },
-            {
-              "id": 2261,
-              "sku": "ARMADE12YLW",
-              "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
-              "cost_price": 75,
-              "fabric_cost": null,
-              "required_fabric": 2.5,
-              "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/2261"
-            },
-            {
-              "id": 2262,
-              "sku": "ARMADE13BLA",
-              "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
-              "cost_price": 75,
-              "fabric_cost": null,
-              "required_fabric": 2.5,
-              "has_attributes": true,
-              "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/2262"
+              "is_active": true
             }
           ],
           "count": 25,
-          "pages": 279,
+          "pages": 35,
           "current_page": 1
         }
 
@@ -1140,108 +1765,62 @@ Details of a specific BROSA product variant
         {
           "data": [
             {
-              "id": 2262,
-              "sku": "ARMADE13BLA",
-              "product_id": 753,
-              "product_sub_type": "Armchair",
-              "cost_type": "FOB (USD)",
-              "cost_price": 75,
-              "fabric_cost": null,
-              "required_fabric": 2.5,
+              "id": 1910,
+              "sku": "11111",
+              "product_id": 1,
+              "product_sub_type": "2",
+              "cost_type": "119",
+              "cost_price": 2,
+              "fabric_cost": 2,
+              "required_fabric": 2,
               "has_attributes": true,
               "is_active": true,
-              "link": "http://brosa-api.dev/api/variants/2262",
               "attributes": {
                 "data": [
                   {
                     "id": 6,
                     "name": "Factory SKU",
-                    "value": "DSF17"
+                    "value": "PC-1"
                   },
                   {
                     "id": 8,
                     "name": "Product Width (cm)",
-                    "value": "78"
+                    "value": "175"
                   },
                   {
                     "id": 9,
                     "name": "Product Depth (cm)",
-                    "value": "85"
+                    "value": "90"
                   },
                   {
                     "id": 10,
                     "name": "Product Height (cm)",
-                    "value": "100.5"
+                    "value": "75"
                   },
                   {
                     "id": 11,
                     "name": "Product Dead Weight (kg)",
-                    "value": "5"
+                    "value": "66"
                   },
                   {
                     "id": 12,
                     "name": "Main Colour",
-                    "value": "Windsor Black Print"
-                  },
-                  {
-                    "id": 14,
-                    "name": "Main Colour Code",
-                    "value": "MG-GZ__"
+                    "value": "Teak"
                   },
                   {
                     "id": 19,
                     "name": "Frame Wood Type",
-                    "value": "Solid Beech"
+                    "value": "45mm Hardwood"
                   },
                   {
                     "id": 20,
                     "name": "Leg Wood Type",
-                    "value": "SolidBeech"
+                    "value": "Lacquered Hairpin Steel"
                   },
                   {
                     "id": 21,
                     "name": "Leg Colour",
-                    "value": "Dark Brown"
-                  },
-                  {
-                    "id": 22,
-                    "name": "Leg Colour Code",
-                    "value": "Wenge-B-Coffee"
-                  },
-                  {
-                    "id": 23,
-                    "name": "Finish Type",
-                    "value": "Lacquered"
-                  },
-                  {
-                    "id": 24,
-                    "name": "Inner Filling",
-                    "value": "Foam core (30-38kg/cbm)"
-                  },
-                  {
-                    "id": 25,
-                    "name": "Suspension",
-                    "value": "S-Springs"
-                  },
-                  {
-                    "id": 26,
-                    "name": "Seating Height (cm)",
-                    "value": "51"
-                  },
-                  {
-                    "id": 27,
-                    "name": "Seating Depth (cm)",
-                    "value": "56"
-                  },
-                  {
-                    "id": 28,
-                    "name": "Seating Width (cm)",
-                    "value": "49"
-                  },
-                  {
-                    "id": 29,
-                    "name": "Arm Height (cm)",
-                    "value": "64/68"
+                    "value": "Grey"
                   },
                   {
                     "id": 30,
@@ -1251,7 +1830,7 @@ Details of a specific BROSA product variant
                   {
                     "id": 31,
                     "name": "Image URL",
-                    "value": "https://cdn.shopify.com/s/files/1/0737/3319/products/armchair-adele-windsor-black-6.jpg?v=1458621372"
+                    "value": "https://cdn.shopify.com/s/files/1/0737/3319/products/dining-table-marc-4-teak-grey-1.jpg?v=1452481442"
                   }
                 ]
               }
