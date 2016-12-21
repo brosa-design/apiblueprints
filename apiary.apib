@@ -28,7 +28,180 @@ Paginated lists of all BROSA taxonomies
 
 + Response 200 (application/json)
 
-        {"data":[{"id":1,"name":"Function","root":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":19,"name":"Entertainments","parent_id":1,"taxon":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":40,"name":"TV Stands","parent_id":19}]}]},{"id":2,"name":"Department","root":[{"id":3,"name":"Outdoor","parent_id":2,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":91,"name":"Porch","parent_id":3,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":54,"name":"Garden","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":55,"name":"Chairs","parent_id":54},{"id":56,"name":"Tables","parent_id":54}]}]}]},{"id":4,"name":"Indoor","parent_id":2,"taxon":[{"id":3,"name":"Outdoor","parent_id":2,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":91,"name":"Porch","parent_id":3,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":54,"name":"Garden","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":55,"name":"Chairs","parent_id":54},{"id":56,"name":"Tables","parent_id":54}]}]}]},{"id":31,"name":"Living","parent_id":4,"taxon":[{"id":3,"name":"Outdoor","parent_id":2,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":91,"name":"Porch","parent_id":3,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":54,"name":"Garden","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":29,"name":"Kitchen","parent_id":91,"taxon":[{"id":47,"name":"Garden","parent_id":3,"taxon":[{"id":48,"name":"Chairs","parent_id":47},{"id":49,"name":"Tables","parent_id":47}]},{"id":26,"name":"Tables","parent_id":29}]},{"id":55,"name":"Chairs","parent_id":54},{"id":56,"name":"Tables","parent_id":54}]}]}]},{"id":22,"name":"Sofas","parent_id":31},{"id":37,"name":"Tables","parent_id":31},{"id":39,"name":"TV Stands","parent_id":31}]}]}]}]}
+        {
+          "data": [
+            {
+              "id": 1,
+              "name": "Function",
+              "permalink": "Function",
+              "root": [
+                {
+                  "id": 17,
+                  "name": "Cooking",
+                  "parent_id": 17,
+                  "taxons": [
+                    {
+                      "id": 41,
+                      "name": "Tables",
+                      "parent_id": 41
+                    }
+                  ]
+                },
+                {
+                  "id": 18,
+                  "name": "Relaxing",
+                  "parent_id": 18,
+                  "taxons": [
+                    {
+                      "id": 96,
+                      "name": "Beds",
+                      "parent_id": 96
+                    }
+                  ]
+                },
+                {
+                  "id": 19,
+                  "name": "Entertainments",
+                  "parent_id": 19,
+                  "taxons": [
+                    {
+                      "id": 40,
+                      "name": "TV Stands",
+                      "parent_id": 40
+                    }
+                  ]
+                },
+                {
+                  "id": 98,
+                  "name": "Storage",
+                  "parent_id": 98
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Department",
+              "permalink": "Department",
+              "root": [
+                {
+                  "id": 3,
+                  "name": "Outdoor",
+                  "parent_id": 3,
+                  "taxons": [
+                    {
+                      "id": 47,
+                      "name": "Garden",
+                      "parent_id": 47,
+                      "taxons": [
+                        {
+                          "id": 48,
+                          "name": "Chairs",
+                          "parent_id": 48
+                        },
+                        {
+                          "id": 49,
+                          "name": "Tables",
+                          "parent_id": 49
+                        },
+                        {
+                          "id": 94,
+                          "name": "Stool",
+                          "parent_id": 94
+                        }
+                      ]
+                    },
+                    {
+                      "id": 91,
+                      "name": "Porch",
+                      "parent_id": 91,
+                      "taxons": [
+                        {
+                          "id": 29,
+                          "name": "Kitchen",
+                          "parent_id": 29,
+                          "taxons": [
+                            {
+                              "id": 26,
+                              "name": "Tables",
+                              "parent_id": 26
+                            }
+                          ]
+                        },
+                        {
+                          "id": 54,
+                          "name": "Garden",
+                          "parent_id": 54,
+                          "taxons": [
+                            {
+                              "id": 55,
+                              "name": "Chairs",
+                              "parent_id": 55
+                            },
+                            {
+                              "id": 56,
+                              "name": "Tables",
+                              "parent_id": 56
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "name": "Indoor",
+                  "parent_id": 4,
+                  "taxons": [
+                    {
+                      "id": 97,
+                      "name": "Storage",
+                      "parent_id": 97
+                    },
+                    {
+                      "id": 99,
+                      "name": "Furniture",
+                      "parent_id": 99,
+                      "taxons": [
+                        {
+                          "id": 31,
+                          "name": "Living",
+                          "parent_id": 31,
+                          "taxons": [
+                            {
+                              "id": 22,
+                              "name": "Sofas",
+                              "parent_id": 22
+                            },
+                            {
+                              "id": 37,
+                              "name": "Tables",
+                              "parent_id": 37
+                            },
+                            {
+                              "id": 39,
+                              "name": "TV Stands",
+                              "parent_id": 39
+                            },
+                            {
+                              "id": 95,
+                              "name": "Beds",
+                              "parent_id": 95
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 100,
+              "name": "test"
+            }
+          ]
+        }
         
 ## '/taxonomies{id}' [/taxonomies{id}]
 
@@ -44,7 +217,16 @@ Update existing BROSA product collection
 
 + Response 200 (application/json)
     
-        {"data":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":19,"name":"Entertainments","parent_id":1,"taxon":[{"id":17,"name":"Cooking","parent_id":1,"taxon":[{"id":41,"name":"Tables","parent_id":17}]},{"id":18,"name":"Relaxing","parent_id":1},{"id":40,"name":"TV Stands","parent_id":19}]}]}
+        {
+          "data": {
+            "id": 22,
+            "name": "Sofas",
+            "permalink": "Department/Indoor/Furniture/Living/Sofas",
+            "taxons": [
+              
+            ]
+          }
+        }
 
 # Group Collection
 
@@ -305,675 +487,322 @@ Paginated lists of all BROSA product
         {
           "data": [
             {
-              "id": 790,
-              "name": "Beds",
-              "collection_id": 4,
+              "id": 164,
+              "name": "1 Seater Armchair",
+              "collection_id": 70,
               "taxonomies": {
                 "data": [
                   {
-                    "id": 95,
-                    "parent": 31,
+                    "id": 48,
+                    "parent": 47,
                     "children": false,
-                    "text": "Beds",
+                    "text": "Chairs",
                     "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                    "permalink": "Department/Outdoor/Garden/Chairs"
                   },
                   {
-                    "id": 96,
-                    "parent": 18,
+                    "id": 55,
+                    "parent": 54,
                     "children": false,
-                    "text": "Beds",
+                    "text": "Chairs",
                     "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
+                    "permalink": "Department/Outdoor/Porch/Garden/Chairs"
                   }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 171,
+              "name": "1 seater Classic Roll-arm Chesterfield",
+              "collection_id": 72,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 180,
+              "name": "1 seater Classic Roll-arm Chesterfield",
+              "collection_id": 76,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 153,
+              "name": "1 Seater Lounge Seat",
+              "collection_id": 66,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 159,
+              "name": "1 Seater Lounge Seat",
+              "collection_id": 68,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 168,
+              "name": "1 Seater Lounge Seat",
+              "collection_id": 71,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 375,
+              "name": "110cm End Extension Dining Table",
+              "collection_id": 147,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 377,
+              "name": "120cm Sideboard",
+              "collection_id": 147,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 376,
+              "name": "150cm End Extension Dining Table",
+              "collection_id": 147,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 378,
+              "name": "160cm Wide Sideboard",
+              "collection_id": 147,
+              "taxonomies": {
+                "data": [
+                  
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 302,
+              "name": "2 Seat Sofa",
+              "collection_id": 135,
+              "taxonomies": {
+                "data": [
+                  {
+                    "id": 22,
+                    "parent": 31,
+                    "children": false,
+                    "text": "Sofas",
+                    "master": "1",
+                    "permalink": "Department/Indoor/Furniture/Living/Sofas"
+                  }
+                ]
+              },
+              "has_attributes": false,
+              "has_variants": false
+            },
+            {
+              "id": 1,
+              "name": "2 Seater",
+              "collection_id": 1,
+              "taxonomies": {
+                "data": [
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": true
             },
             {
-              "id": 791,
-              "name": "Beds",
-              "collection_id": 21,
+              "id": 264,
+              "name": "2 Seater",
+              "collection_id": 119,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": true
-            },
-            {
-              "id": 792,
-              "name": "Beds",
-              "collection_id": 26,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": true
-            },
-            {
-              "id": 793,
-              "name": "Beds",
-              "collection_id": 36,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": true
-            },
-            {
-              "id": 795,
-              "name": "Beds",
-              "collection_id": 127,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 796,
-              "name": "Beds",
-              "collection_id": 12,
+              "id": 266,
+              "name": "2 Seater",
+              "collection_id": 120,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": true
-            },
-            {
-              "id": 797,
-              "name": "Beds",
-              "collection_id": 133,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 798,
-              "name": "Beds",
-              "collection_id": 130,
+              "id": 269,
+              "name": "2 Seater",
+              "collection_id": 121,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 799,
-              "name": "Beds",
-              "collection_id": 19,
+              "id": 272,
+              "name": "2 Seater",
+              "collection_id": 122,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": true
-            },
-            {
-              "id": 800,
-              "name": "Beds",
-              "collection_id": 24,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 801,
-              "name": "Beds",
-              "collection_id": 128,
+              "id": 46,
+              "name": "2 Seater",
+              "collection_id": 23,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 802,
-              "name": "Beds",
-              "collection_id": 126,
+              "id": 73,
+              "name": "2 Seater",
+              "collection_id": 33,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 803,
-              "name": "Beds",
-              "collection_id": 134,
+              "id": 86,
+              "name": "2 Seater",
+              "collection_id": 38,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 804,
-              "name": "Beds",
-              "collection_id": 129,
+              "id": 650,
+              "name": "2 Seater",
+              "collection_id": 177,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 805,
-              "name": "Beds",
-              "collection_id": 132,
+              "id": 154,
+              "name": "2 Seater",
+              "collection_id": 66,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 806,
-              "name": "Beds",
-              "collection_id": 125,
+              "id": 158,
+              "name": "2 Seater",
+              "collection_id": 68,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 807,
-              "name": "Beds",
-              "collection_id": 51,
+              "id": 674,
+              "name": "2 Seater",
+              "collection_id": 190,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": true
-            },
-            {
-              "id": 808,
-              "name": "Beds",
-              "collection_id": 131,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 1086,
-              "name": "Beds",
-              "collection_id": 171,
+              "id": 419,
+              "name": "2 Seater",
+              "collection_id": 152,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
               "has_variants": false
             },
             {
-              "id": 1089,
-              "name": "Beds",
-              "collection_id": 359,
+              "id": 165,
+              "name": "2 Seater",
+              "collection_id": 70,
               "taxonomies": {
                 "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": false
-            },
-            {
-              "id": 911,
-              "name": "Beds",
-              "collection_id": 214,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": false
-            },
-            {
-              "id": 912,
-              "name": "Beds",
-              "collection_id": 236,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": false
-            },
-            {
-              "id": 913,
-              "name": "Beds",
-              "collection_id": 215,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": false
-            },
-            {
-              "id": 914,
-              "name": "Beds",
-              "collection_id": 216,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
-                ]
-              },
-              "has_attributes": false,
-              "has_variants": false
-            },
-            {
-              "id": 950,
-              "name": "Beds",
-              "collection_id": 245,
-              "taxonomies": {
-                "data": [
-                  {
-                    "id": 95,
-                    "parent": 31,
-                    "children": false,
-                    "text": "Beds",
-                    "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
-                  },
-                  {
-                    "id": 96,
-                    "parent": 18,
-                    "children": false,
-                    "text": "Beds",
-                    "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
-                  }
+                  
                 ]
               },
               "has_attributes": false,
@@ -982,7 +811,7 @@ Paginated lists of all BROSA product
           ],
           "count": 25,
           "pages": 41,
-          "current_page": 10
+          "current_page": 1
         }
 
 ### POST [POST]
@@ -1014,9 +843,9 @@ Details of a specific BROSA product .
         {
           "data": [
             {
-              "id": 791,
+              "id": 790,
               "name": "Beds",
-              "collection_id": 21,
+              "collection_id": 4,
               "taxonomies": {
                 "data": [
                   {
@@ -1025,7 +854,7 @@ Details of a specific BROSA product .
                     "children": false,
                     "text": "Beds",
                     "master": "1",
-                    "permalink": "Department/Indoor/Furniture/Living/Beds/Beds"
+                    "permalink": "Department/Indoor/Furniture/Living/Beds"
                   },
                   {
                     "id": 96,
@@ -1033,7 +862,7 @@ Details of a specific BROSA product .
                     "children": false,
                     "text": "Beds",
                     "master": null,
-                    "permalink": "Function/Relaxing/Beds/Beds"
+                    "permalink": "Function/Relaxing/Beds"
                   }
                 ]
               },
@@ -1042,216 +871,120 @@ Details of a specific BROSA product .
               "variants": {
                 "data": [
                   {
-                    "id": 1030,
-                    "sku": "BEDERI01GRYQB",
-                    "product_id": 791,
+                    "id": 889,
+                    "sku": "BEDANI01BEIQB",
+                    "product_id": 790,
                     "product_sub_type": "24",
-                    "cost_type": "1",
-                    "cost_price": null,
-                    "fabric_cost": 0,
+                    "cost_type": "120",
+                    "cost_price": 285,
+                    "fabric_cost": null,
                     "required_fabric": 2.5,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1031,
-                    "sku": "BEDERI02GRYQB",
-                    "product_id": 791,
+                    "id": 890,
+                    "sku": "BEDANI02BLAQB",
+                    "product_id": 790,
                     "product_sub_type": "24",
-                    "cost_type": "1",
-                    "cost_price": null,
-                    "fabric_cost": 0,
+                    "cost_type": "120",
+                    "cost_price": 285,
+                    "fabric_cost": null,
                     "required_fabric": 2.5,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1032,
-                    "sku": "BEDERI03CHAQB",
-                    "product_id": 791,
+                    "id": 891,
+                    "sku": "BEDANI03GRYQB",
+                    "product_id": 790,
                     "product_sub_type": "24",
-                    "cost_type": "1",
-                    "cost_price": null,
-                    "fabric_cost": 0,
+                    "cost_type": "120",
+                    "cost_price": 285,
+                    "fabric_cost": null,
                     "required_fabric": 2.5,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1033,
-                    "sku": "BEDERI04BEIQB",
-                    "product_id": 791,
+                    "id": 892,
+                    "sku": "BEDANI07HGRYQB",
+                    "product_id": 790,
                     "product_sub_type": "24",
                     "cost_type": "120",
-                    "cost_price": 190,
+                    "cost_price": 285,
                     "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
+                    "required_fabric": 2.5,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1034,
-                    "sku": "BEDERI05BLUQB",
-                    "product_id": 791,
+                    "id": 893,
+                    "sku": "BEDANI09CGRYQB",
+                    "product_id": 790,
                     "product_sub_type": "24",
                     "cost_type": "120",
-                    "cost_price": 190,
+                    "cost_price": 285,
                     "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
+                    "required_fabric": 2.5,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1035,
-                    "sku": "BEDERI11HGRYQB",
-                    "product_id": 791,
-                    "product_sub_type": "24",
-                    "cost_type": "120",
-                    "cost_price": 190,
-                    "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1036,
-                    "sku": "BEDERI13GRYQB",
-                    "product_id": 791,
-                    "product_sub_type": "24",
-                    "cost_type": "120",
-                    "cost_price": 190,
-                    "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1037,
-                    "sku": "BEDERI15BEIQB",
-                    "product_id": 791,
-                    "product_sub_type": "24",
-                    "cost_type": "120",
-                    "cost_price": 190,
-                    "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1038,
-                    "sku": "BEDERI17CGRYQB",
-                    "product_id": 791,
-                    "product_sub_type": "24",
-                    "cost_type": "120",
-                    "cost_price": 190,
-                    "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1039,
-                    "sku": "BEDERI06GRYKB",
-                    "product_id": 791,
-                    "product_sub_type": "25",
-                    "cost_type": "1",
-                    "cost_price": null,
-                    "fabric_cost": 0,
-                    "required_fabric": 3,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1040,
-                    "sku": "BEDERI07GRYKB",
-                    "product_id": 791,
-                    "product_sub_type": "25",
-                    "cost_type": "1",
-                    "cost_price": null,
-                    "fabric_cost": 0,
-                    "required_fabric": 3,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1041,
-                    "sku": "BEDERI08CHAKB",
-                    "product_id": 791,
-                    "product_sub_type": "25",
-                    "cost_type": "1",
-                    "cost_price": null,
-                    "fabric_cost": 0,
-                    "required_fabric": 3,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1042,
-                    "sku": "BEDERI09BEIKB",
-                    "product_id": 791,
+                    "id": 894,
+                    "sku": "BEDANI04BEIKB",
+                    "product_id": 790,
                     "product_sub_type": "25",
                     "cost_type": "120",
-                    "cost_price": 217,
+                    "cost_price": 320,
                     "fabric_cost": null,
                     "required_fabric": 0,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1043,
-                    "sku": "BEDERI10BLUKB",
-                    "product_id": 791,
+                    "id": 895,
+                    "sku": "BEDANI05BLAKB",
+                    "product_id": 790,
                     "product_sub_type": "25",
                     "cost_type": "120",
-                    "cost_price": 217,
+                    "cost_price": 320,
                     "fabric_cost": null,
                     "required_fabric": 0,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1044,
-                    "sku": "BEDERI12HGRYKB",
-                    "product_id": 791,
+                    "id": 896,
+                    "sku": "BEDANI06GRYKB",
+                    "product_id": 790,
                     "product_sub_type": "25",
                     "cost_type": "120",
-                    "cost_price": 217,
+                    "cost_price": 320,
                     "fabric_cost": null,
                     "required_fabric": 0,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1045,
-                    "sku": "BEDERI14GRYKB",
-                    "product_id": 791,
+                    "id": 897,
+                    "sku": "BEDANI08HGRYKB",
+                    "product_id": 790,
                     "product_sub_type": "25",
                     "cost_type": "120",
-                    "cost_price": 217,
+                    "cost_price": 320,
                     "fabric_cost": null,
                     "required_fabric": 0,
-                    "has_attributes": true,
+                    "has_attributes": false,
                     "is_active": false
                   },
                   {
-                    "id": 1046,
-                    "sku": "BEDERI16BEIKB",
-                    "product_id": 791,
+                    "id": 898,
+                    "sku": "BEDANI10CGRYKB",
+                    "product_id": 790,
                     "product_sub_type": "25",
                     "cost_type": "120",
-                    "cost_price": 217,
-                    "fabric_cost": null,
-                    "required_fabric": 0,
-                    "has_attributes": true,
-                    "is_active": false
-                  },
-                  {
-                    "id": 1047,
-                    "sku": "BEDERI18CGRYKB",
-                    "product_id": 791,
-                    "product_sub_type": "25",
-                    "cost_type": "120",
-                    "cost_price": 217,
+                    "cost_price": 320,
                     "fabric_cost": null,
                     "required_fabric": 0,
                     "has_attributes": true,
