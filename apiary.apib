@@ -2528,7 +2528,54 @@ Details of a specific BROSA product variant
                 }
               ]
             }
+## '/get-eta' [/get-eta]
 
+### POST [POST]
+
+Delivery times of the variants specified
+
++ Request (application/json)
+
+            {
+                "variants": [{
+                    "sku": "BHDHEI10BEIKB:SDSSLM210BEIKB:SLT02KB",
+                    "qty": "1"
+                }, {
+                    "sku": "TBLDOV01OAK",
+                    "qty": "1"
+                }]
+            }
+
++ Response 200 (application/json)
+    
+            {
+              "data": [
+                {
+                  "BHDHEI10BEIKB:SDSSLM210BEIKB:SLT02KB": {
+                    "eta": {
+                      "week": 4,
+                      "range_type": "week",
+                      "tooltip": "\n            A batch of this item is currently being crafted - be quick as our batches usually sell out before they're finished.\n        ",
+                      "range": 3,
+                      "label": "4 to 7 weeks"
+                    },
+                    "status_index": 9,
+                    "stock": 1
+                  },
+                  "TBLDOV01OAK": {
+                    "eta": {
+                      "week": 4,
+                      "range_type": "week",
+                      "tooltip": "\n            A batch of this item is currently being crafted - be quick as our batches usually sell out before they're finished.\n        ",
+                      "range": 3,
+                      "label": "4 to 7 weeks"
+                    },
+                    "status_index": 9,
+                    "stock": 1
+                  }
+                }
+              ]
+            }
 # Group Attributes
 
 ## '/attributes' [/attributes{?sort,page}]
