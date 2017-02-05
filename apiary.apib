@@ -288,10 +288,60 @@ Paginated lists of all BROSA product/variant attributes
 
 ### GET [GET]
 
-Details of a specific BROSA product/variant attributes  
+Details of a specific BROSA product/variant attribute 
 
 + Parameters
-    + id - To indicate the specific BROSA product/variants attributes
+    + id - To indicate the specific BROSA product/variants tag
+
++ Response 200 (application/json)
+    
+        {
+          "data": [
+            {
+              "id": 21,
+              "name": "Leg Colour"
+            }
+          ]
+        }
+
+# Group Tags
+
+## '/tags' [/tags{?sort,page}]
+
+### GET [GET]
+
+Paginated lists of all BROSA product/variant tags
+
++ Parameters
+    + sort (optional) - To get the results sorted. Values could be id/sku or -id/-sku for ascending or decending order
+    + page (optional) - To specify the pagenumber required
+
++ Response 200 (application/json)
+    
+            {
+              "data": [
+                {
+                  "id": 6,
+                  "name": "Christmas Sale"
+                },
+                {
+                  "id": 5,
+                  "name": "New Year Sale"
+                }
+              ],
+              "count": 2,
+              "pages": 1,
+              "current_page": 1
+            }
+
+## '/tags/{id}'   [/tags/{id}]
+
+### GET [GET]
+
+Details of a specific BROSA product/variant tag  
+
++ Parameters
+    + id - To indicate the specific BROSA product/variants tag
 
 + Response 200 (application/json)
     
